@@ -1,4 +1,9 @@
-﻿body {
+﻿@font-face {
+    font-family: 'Open Sans';
+	src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+body {
     padding-top: 60px;
     font-family: "Open Sans";
 }
@@ -79,6 +84,7 @@
     width: 185px;
     display: inline-block;
     margin: 2px;
+    min-height:140px;
 }
 
 .user-thumbnail .user-status {
@@ -122,9 +128,9 @@
 }
 
 #chat-messages-info-container{
-    min-height: 100px;
+    padding-bottom: 1rem;
     border-bottom: solid 1px;
-    border-color: lightslategray;
+    border-color: rgba(119, 136, 153, 0.2);
 }
 
 #chat-messages-user-details-container {
@@ -176,26 +182,31 @@
 }
 
 .chat-message-item > .chat-bubble-left {
-    background-color: cadetblue;
+    background-color: rgba(95, 158, 160, 0.6);
 }
 
 .chat-bubble.chat-bubble-left:after {
     border-color: rgba(136, 183, 213, 0);
-	border-right-color: cadetblue;
+	border-right-color: rgba(95, 158, 160, 0.6);
     right: 100%;
 }
 
 .chat-message-item > .chat-bubble-right {
-    background-color: dodgerblue;
+    background-color: rgba(95, 158, 160, 0.2);
+    margin-left: 1rem;
 }
 
 .chat-bubble.chat-bubble-right:after {
     left: 100%;
     border-color: rgba(136, 183, 213, 0);
-	border-left-color: dodgerblue;
+	border-left-color:  rgba(95, 158, 160, 0.2);
 }
 
 .chat-message-item > .time-container {
     width: 50px;
-    padding: 0.2rem;
+    padding: 1rem;
+}
+
+.choose-image-button {
+    margin: 1rem;
 }
