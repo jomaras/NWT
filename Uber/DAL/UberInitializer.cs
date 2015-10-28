@@ -10,7 +10,7 @@ namespace Uber.DAL
     public class UberInitializer : DropCreateDatabaseAlways<UberContext>
     {
         protected override void Seed(UberContext context)
-        {
+        {            
             var users = new List<User>()
             {
                 new User() { Name = "Ivo", Surname = "Ivić" },

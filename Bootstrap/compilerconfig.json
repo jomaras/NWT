@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "Content/test.css",
+    "inputFile": "Content/test.sass"
+  },
+  {
+    "outputFile": "Content/test.css",
+    "inputFile": "Content/test.less"
+  },
+  {
+    "outputFile": "Content/a.css",
+    "inputFile": "Content/a.scss"
+  }
+]
