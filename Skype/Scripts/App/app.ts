@@ -23,7 +23,7 @@ class TodoItem {
                 <div>
                     <label>Status:</label> {{getSolvedTodosCount()}}/{{todos.length}}
                     <label *ng-if="getSolvedTodosCount() == todos.length">
-                        Congratulations - We're done!
+                        Congratulations - We're finally done!
                     </label>
                 </div>
                 <div>
@@ -54,7 +54,7 @@ class TodoApp{
         }, 0);
     }
 
-    private onRemoveTodoClick(todoItem: TodoItem): boolean{
+    public onRemoveTodoClick(todoItem: TodoItem): boolean{
         var index = this.todos.findIndex((item) => item == todoItem);
 
         if(index != -1){
@@ -64,21 +64,21 @@ class TodoApp{
         return false;
     }
 
-    private onCheckboxChange(checkbox: HTMLInputElement, todoItem: TodoItem){
+    public onCheckboxChange(checkbox: HTMLInputElement, todoItem: TodoItem){
         todoItem.done = checkbox.checked;
     }
 
-    private onKeyPress(event: KeyboardEvent, todoInput: HTMLInputElement): void {
+    public onKeyPress(event: KeyboardEvent, todoInput: HTMLInputElement): void {
         if(event.keyCode == 13){
             this.addTodo(todoInput);
         }
     }
 
-    private onAddTodoClick(todoInput: HTMLInputElement): void{
+    public onAddTodoClick(todoInput: HTMLInputElement): void{
         this.addTodo(todoInput);
     }
 
-    private onCompleteAll():void{
+    public onCompleteAll():void{
         this.todos.forEach((todo)=>todo.done = true);
     }
 
