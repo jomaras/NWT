@@ -5,3 +5,12 @@
 span {
     font-style: italic;
 }
+
+.done {
+    text-decoration:line-through;
+    color: green;
+}
+
+.not-done {
+    color: red;
+}
